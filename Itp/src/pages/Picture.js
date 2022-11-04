@@ -42,4 +42,4 @@ const Picture = () => {
   );
 };
 
-export default App;
+export default Picture;
