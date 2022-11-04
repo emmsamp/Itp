@@ -1,51 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import {TouchableOpacity, View} from 'react-native';
-import HolaMundo from './src/components/HolaMundo';
-import Title from './src/components/Title';
+import {View, ActivityIndicator} from 'react-native';
+import {Image} from '@rneui/themed';
 import styles from './src/styles/styles';
-import {Button, Input} from '@rneui/themed';
-import {getText} from './src/services/getData';
+import graf from './src/assets/graf.jpg'
 
 const App = () => {
-  const [text, setTexto] = useState('');
-  const [fact, setFact] = useState('');
-
-  useEffect(() => {
-    getText().then(result => {
-      console.log(result, result.fact);
-      setFact(result.fact);
-    });
-  }, []);
-
   return (
     <View style={styles.main}>
-      <Button title="solid" />
-      <Button title="Outline" type="outline" />
-      <Button title="Clear" type="Clear" />
-
-    <Input placeholder='BASIC INPUT' value={text} onChangeText={setTexto} />
-
-      <HolaMundo 
-      parametro1={text} 
-      propiedad2="red" 
-      size={18} 
-      value={true}
+      <Image
+        source={graf}
+        containerStyle={styles.item}
+        PlaceholderContent={<ActivityIndicator />}
       />
-      <TouchableOpacity>
-      <HolaMundo 
-      parametro1="adios" 
-      propiedad2="blue" 
-      size={24} 
-      value={true}
-      />
-      </TouchableOpacity>
-      <HolaMundo 
-      parametro1={fact} 
-      propiedad2="blue" 
-      size={28} 
-      value={false}
-      />
-    </View>
+  </View>
   );
 };
 

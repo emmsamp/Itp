@@ -1,5 +1,8 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet, Dimensions} from "react-native";
 import { backgroun, primary } from "./colors";
+
+const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
     main: {
@@ -14,6 +17,10 @@ const styles = StyleSheet.create({
     title: {
         color: primary,
         fontSize: 18,
+    },
+  item: {
+    width: width -30,
+    height: width -30,
     },
 });
 
