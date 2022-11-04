@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {View, ActivityIndicator, Text} from 'react-native';
 import {Image, Button} from '@rneui/themed';
 import styles from './src/styles/styles';
-import graf from './src/assets/graf.jpg'
+import img1 from './src/assets/img1.jpg'
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
       <Button title="Actualizar" />
       </View>
       <Image
-        source={graf}
+        source={img1}
         containerStyle={styles.item}
         PlaceholderContent={<ActivityIndicator />}
       />
