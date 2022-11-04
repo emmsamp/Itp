@@ -7,10 +7,10 @@ const HolaMundo = ({value, parametro1, propiedad2, size}) => {
   useEffect(() => {
     // nuestra función se va a ejecutar solo una vez.
     if (value) {
-        setChangeFondo('white');
-      }
-  }, []);  // si no hay nada en los [] se va a ejecutar solo una vez la condición
-  
+      setChangeFondo('white');
+    }
+  }, []); // si no hay nada en los [] se va a ejecutar solo una vez la condición
+
   // let fondo = 'black';               La difencia de usar Hooks es que esta función se ejecuta todo el tiempo
   // if (value) {
   //   fondo = 'white';

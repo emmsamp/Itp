@@ -10,10 +10,10 @@ import Picture from './src/pages/Picture';
 const App = () => {
   return (
     <NavigationContainer>
-    <Stack.Navigator>
-    <Stack.Screen name="PictureScreen" component={Picture} />
-    <Stack.Screen name="AboutScreen" component={About} />
-  </Stack.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="PictureScreen" component={Picture} />
+        <Stack.Screen name="AboutScreen" component={About} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
