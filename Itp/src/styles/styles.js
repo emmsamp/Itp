@@ -11,6 +11,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: backgroun
     },
+    left: {
+        width,
+        // height: height -300,
+        justifyContent:'center',
+        alignItems: 'flex-start',
+        margin: 25,
+        padding: 15,
+    },
     textPrimary: {
         color: primary,
     },
@@ -22,6 +30,11 @@ const styles = StyleSheet.create({
     width: width -30,
     height: width -30,
     },
+    txt:{
+        fontSize: 18,
+        width: width -30,
+    },
+
 });
 
 export default styles;
