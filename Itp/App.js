@@ -12,23 +12,26 @@ const arrayImg = [img1, img2, img3, img4];
 
 const App = () => {
   const [txt, setTxt] = useState ('valor pr dflt');
+  const [img, setImg] = useState (img4);
 
   useEffect(() => {
-    updateTxt();
+    updateTxtImg();
   }, []);
 
-  const updateTxt = () => getText().then(result => setTxt(result.fact));
-
-  const getImg = () => arrayImg[Math.floor(Math.random() * arrayImg.length)];
+  const updateTxtImg = () => {
+    getText().then(result => setTxt(result.fact));
+    const itemRandom = arrayImg[Math.floor(Math.random() * arrayImg.length)];
+    setImg(itemRandom);
+  };
 
   return (
     <View style={styles.main}>
       <View style={styles.left}>
       <Button 
-      title="Actualizar" onPress={updateTxt} />
+      title="Actualizar" onPress={updateTxtImg} />
       </View>
       <Image
-        source={getImg}
+        source={img}
         containerStyle={styles.item}
         PlaceholderContent={<ActivityIndicator />}
       />
