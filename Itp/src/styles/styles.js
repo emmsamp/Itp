@@ -37,9 +37,25 @@ const styles = StyleSheet.create({
     padding: 50,
     margin: 10,
   },
+  listimg: {
+    width: 100,
+    height: 100,
+    resizeMode: 'cover',
+    backgroundColor: 'null',
+    borderColor: 'black',
+    borderStyle: 'solid',
+    borderWidth: 1,
+  },
   txt: {
     fontSize: 18,
     width: width - 30,
+  },
+  description: {
+    color: 'blue',
+    fontSize: 18,
+  },
+  width100: {
+    width: '100%',
   },
 });
 
