@@ -40,6 +40,21 @@ const DATA = [
     description: 'QA',
     info: '77777778877',
   },  
+  {
+    title: 'Departamento',
+    description: 'QA',
+    info: '77777778877',
+  },
+  {
+    title: 'Departamento',
+    description: 'QA',
+    info: '77777778877',
+  },
+  {
+    title: 'Departamento',
+    description: 'QA',
+    info: '77777778877',
+  },  
 ];
 
 const arrayImg = [img1, img2, img3, img4, img1, img2, img3, img4, img5, img6];
@@ -57,6 +72,8 @@ const itemRender = ({item}) => (
 const itemImg = ({item}) => <Image source={item} style={styles.listimg} />;
 
 const keyExtractor = (item, index) => index.toString();
+const keyExtractorv = (item, index) => index.toString();
+
 
 const About = ({navigation}) => {
   const irA = () => {
@@ -78,7 +95,7 @@ const About = ({navigation}) => {
           showsVerticalScrollIndicator={false}
           data={DATA}
           renderItem={itemRender}
-          keyExtractor={keyExtractor}
+          keyExtractor={keyExtractorv}
         />
       </View>
     </View>
